@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* :empty 空元素 */
+        /* h3:empty{
+           border:2px solid aqua;
+            width: 10px;
+            height: 10px;
+        } */
+        /* :not() 取反 */
+        /* span:not([title]){
+            color: red;
+        }
+        body :not(div){
+            color: blue;
+        } */
+        div:not(:first-of-type){
+            color: blue; 
+        }
+        /* :root根元素等于html */
+        :root{
+            background-color: #ccc;
+            font-size: 20px;
+        }
+        /* :target 给当前锚点设样式*/
+        :target{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- <a name="top"></a> -->
+    <div id="top">我是顶部</div>
+    <h3>welcome</h3>
+    <h3></h3>
+    <hr>
+
+    <span>span1</span>
+    <span title="t1">span2</span>
+    <span>span3</span>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <hr>
+    
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+    <p>p5</p>
+    <p>p6</p>
+    <p>p7</p>
+    <p>p8</p>
+    <p>p9</p>
+    <p>p10</p>
+    <p>p11</p>
+    <p>p12</p>
+    <p>p13</p>
+    <p>p14</p>
+    <p>p15</p>
+    <p>p16</p>
+    <p>p17</p>
+    <p>p18</p>
+    <p>p19</p>
+    <p>p20</p>
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+    <p>p5</p>
+    <p>p6</p>
+    <p>p7</p>
+    <p>p8</p>
+    <p>p9</p>
+    <p>p10</p>
+    <p>p11</p>
+    <p>p12</p>
+    <p>p13</p>
+    <p>p14</p>
+    <p>p15</p>
+    <a href="#top">返回顶部</a>
+</body>
+</html>

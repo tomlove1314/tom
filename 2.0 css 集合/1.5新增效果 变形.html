@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        width: 300px;
+        height: 200px;
+        border: 1px solid red;
+        margin: 15px;
+    }
+    /* 平移 */
+    .d1{
+        /* transform: translateX(100px); */
+        transform: translate(400px,50px);
+    }
+    /* 缩放 */
+    .d2{
+        transform: scale(0.5);
+    }
+    /* 旋转 */
+    .d3{
+        transform: rotate(10deg);
+    }
+    /* 倾斜 */
+    .d4{
+        transform: skewX(10deg);
+    }
+    /* 多个效果叠加 */
+   .d5{
+    transform:translateX(100px) scale(0.8) rotate(10deg) skew(10deg);
+   } 
+   /* s设置变形的基准点，默认元素中心 */
+   .d6{
+    transform: rotate(5deg);
+    transform-origin:left top;
+   }
+</style>
+<body>
+    <div>default</div>
+    <div class="d1">div1</div>
+    <div class="d2">div2</div>
+    <div class="d3">div3</div>
+    <div class="d4">div4</div>
+    <div class="d5">div5</div>
+    <div class="d6">div6</div>
+
+</body>
+</html>

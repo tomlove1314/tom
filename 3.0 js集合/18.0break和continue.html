@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+         * break跳出整个循环，中止循环的执行
+         */
+        //将1到20之间的整数相加，当累计值大于50时停止相加，输出当前整数和累加值
+        // var sum = 0;
+        // for(i=1;i<=20;i++){
+        //     sum+=i;
+        //     if(sum>50){
+        //         break;
+        //     }
+        // }
+        // console.log('当前整数：'+i+',累计值：'+sum);
+
+        /**
+         * continue 跳出本次循环，执行下一次循环（本次尚未执行完的代码不再执行）
+         */
+        //计算1到10之间所有偶数之和
+        // var sum=0;
+        // for(i=1;i<=10;i++){
+        //     if(i%2!==0){
+        //         continue;//如果i是奇数，跳过本次循环，不累加，执行下一次循环
+        //     }
+        //     sum+=i;
+        // }
+        // console.log('1到10之间所有偶数之和:'+sum);
+
+        //案例：循环输入8名学生到考试成绩，统计分数大于等于80分到学生比例
+        var count=0;
+        for(i=1;i<=8;i++){
+            var score=Number(prompt('请输入第'+i+'名学生到考试成绩：'));
+            if(score<80){
+                continue;//不统计分数小于80分到学生
+            }
+            count++;
+        }
+        console.log('大于等于80分学生到比例:'+(count/8)*100+'%');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

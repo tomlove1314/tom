@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        border: 1px solid #ccc;
+    }
+    .left,.right{
+        float: left;
+    }
+    .left{
+        background-color: aqua;
+        transform: translate(200px,200px)  skewY(30deg);
+    }
+    .right{
+        background-color: rgb(55, 152, 232);
+        transform: translate(200px,200px)  skewY(-30deg);
+    }
+    .top{
+        background-color: rgb(165, 82, 242);
+        transform: translate(251.9px,221px) rotate(30deg) skew(-30deg,0) scale(1.15,1);
+    }
+</style>
+<body>
+    <div class="top"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+</body>
+</html>

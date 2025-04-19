@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 700px;
+        height: 500px;
+        border: 1px solid #ccc;
+         /* 设置网格布局 */
+         display: grid;
+
+         /* 网格的列宽 */
+         grid-template-columns: 100px 100px 100px 100px;
+         /* grid-template-columns: 20% 20% 20% 20% ; */
+         /* auto关键字，设置自动 */
+         /* grid-template-columns: 20% 20% auto; */
+         /* fr关键字，设置比例 关系*/
+         /* grid-template-columns: 1fr 1fr 1fr; */
+         /* repeat()函数，包含多个重复使用 */
+         /* grid-template-columns: repeat(4,100px); */
+         /* auto-fill关键字，自动填充，直到容器不能放置更多列 */
+         /* grid-template-columns: repeat(auto-fill,100px); */
+
+         /* 网格的行高 */
+         grid-template-rows: 100px 100px 100px;
+         /* grid-template-rows:20% 20% 20% ; */
+         /* grid-template-rows: fr1 fr1 fr1; */
+         /* grid-template-rows: repeat(2,100px)100px; */
+
+         /* 列间距 */
+         /* grid-column-gap:10px; */
+
+         /* 行间距 */
+         /* grid-row-gap:10px ; */
+
+         /* 单元格内容水平对齐 */
+         /* justify-items: start; */
+
+         /* 单元格内容垂直对齐 */
+         /* align-items: start; */
+
+         /* 整个网格在容器中的水平对齐 */
+         /* justify-content: space-evenly; */
+
+         /* 整个网格在容器中的垂直对齐 */
+         /* align-content: space-evenly; */
+
+         /* 自动放置元素的顺序 */
+         /* grid-auto-flow: column; */
+    }
+    .d1{
+        /* 列的开始和结束 */
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        /* 行的开始和结束 */
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .d2{
+        /* 列行的开始和结束,简写 */
+        grid-column: 3/5;
+        grid-row: 2/3;
+    }
+    .container>div{
+        border: 1px solid red;
+       
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item d1">01</div>
+        <div class="item d2">02</div>
+        <div class="item">03</div>
+        <div class="item">04</div>
+        <div class="item">05</div>
+        <div class="item">06</div>
+        <div class="item">07</div>
+        <div class="item">08</div>
+        <div class="item">09</div>
+    </div>
+</body>
+</html>

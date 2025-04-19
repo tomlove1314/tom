@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+         * 实参的个数和形参的个数可以不一样
+         * 1.未指定的参数，其默认值为underfined
+         * 2.多余的参数，没有任何影响
+         */
+        // function f1(a,b){
+        //     console.log(a,b);
+        //     console.log(arguments);//可以通过arguments获取所有实参
+        // }
+        // // f1(5,7);
+        // // f1(5);
+        // f1(5,7,8);
+
+        /**
+         * 同名的函数,后定义的会覆盖前面定义的
+         */
+        // function f2(a){
+        //     console.log(a);
+        // }
+        // function f2(a,b){
+        //     console.log(a,b);
+        // }
+        // f2(5);
+        
+
+        /**
+         * 函数🆚变量同名:变量会覆盖函数，即函数不生效
+         */
+         var f3='嘿嘿';
+        function f3(a){
+            console.log(a);
+        }
+        
+        // f3();
+        // console.log(f3);
+
+        /**
+         * 对函数的参数进行处理
+         */
+        function f4(a,b){
+            //只要不是数字，则默认设置为0
+            // if(isNaN(a)){
+            //     a=0;
+            // }
+            // if(isNaN(b)){
+            //     b=0;
+            // }
+
+            //如果参数为underfined,NaN，null,则默认设置为0
+            if(typeof(a)!='string'&&!a){
+                a=0;
+            }
+            if(typeof(b)!='string'&&!b){
+                b=0;
+            }
+            console.log(a+b);
+        }
+        f4(2,7);
+        f4('hello','world');
+        f4(2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

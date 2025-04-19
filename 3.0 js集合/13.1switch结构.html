@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+         * 基本用法
+         */
+        var day = Number(prompt('今天星期几(1-7):'));
+        //使用if结构
+        // if(day==1){
+        //     console.log('今天吃油条');
+        // }else if(day==2){
+        //     console.log('今天吃馄炖');
+        // }else if(day==3||day==4||day==5){
+        //     console.log('今天吃煎饼');
+        // }else{
+        //     console.log('今天吃牛排');
+        // }
+
+        //使用switch
+        switch(day){
+            case 1:
+                console.log('今天吃油条');
+                break;//如果不写break，代码一直执行，一直到出现break为主
+            case 2:
+                console.log('今天吃馄炖');
+                break;
+            case 3:
+            case 4:
+            case 5:
+                console.log('今天吃煎饼');
+                break;
+            default://如果条件都不匹配，执行此代码
+                console.log('今天吃馄炖');
+                break;
+        }
+            
+        //switch总结，只适用于等值判断
+     
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+         * 二重循环
+         */
+
+         //案例：某次程序大赛，共有3个班参加，每个班有4名学生，输入各班级每个学生到成绩，计算各班级的平均分.同时统计90分以上的学生数量
+
+        //  //外层循环控制班级数量
+        //  var count=0;
+        //  for(var i=1;i<=3;i++){
+        //     alert('----------请输入第'+i+'个班学生的成绩----------')
+        //     //内层循环控制班级学生数量
+        //     var sum=0;//每个班级的总分
+        //     for(var j=1;j<=4;j++){
+        //         var score=Number(prompt('请输入第'+j+'个学生的成绩：'));
+        //         sum+=score;
+        //         //如果分数小于90分，则不统计
+        //         if(score<90){
+        //             continue;//二重循环中break和continue,遵循就近原则
+        //         }count++;
+        //     }
+        //     console.log('第'+i+'班级的平均分：'+sum/4);
+        //  }
+        //  console.log('所有90分以上的学生数量:'+count);
+
+        //九九乘法表
+        for(var i=1;i<=9;i++){
+            for(var j=1;j<=i;j++){
+                document.write(j+'*'+i+'='+j*i+'&nbsp;&nbsp');
+            }
+            document.write('<br>');
+        }
+
+        
+         
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

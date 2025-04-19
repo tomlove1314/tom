@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 300px;
+        height: 300px;
+        border: 1px solid #ccc;
+        /* 尺寸调节 */
+        resize:vertical;
+        overflow: auto;
+        /* 盒子阴影:水平 垂直 模糊程度 模糊尺寸 颜色 内/外阴影 */
+        box-shadow:10px 10px 5px 6px #ccc;
+    }
+    .container div{
+        width: 100px;
+        height: 300px;
+        border: 1px solid rgb(63, 11, 11);
+        float: left;
+        /* 此时设置盒子的宽度和高度会包含padding内边距和border边框 */
+        box-sizing:border-box;
+        padding: 5px;
+        /* 不包含margin外边距 */
+    }
+</style>
+<body>
+    <div class="container">
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    </div>
+</body>
+</html>

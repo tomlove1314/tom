@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+         * 全局作用域
+         */
+        var name='tom';//全局变量，在任何位置都可以访问，页面关闭后销毁
+
+        /**
+         * 局部作用域
+         */
+        function f1(hobby){//函数的参数也是局部变量
+            var age=18;//局部变量，只能在当前函数中访问，当函数运行结束后自动销毁
+            sex='female';//全局变量，未定义而直接赋值的变量
+
+            console.log('f1:',name);
+            console.log('f1:',age);
+            console.log('f1:',sex);
+            console.log('f1:',hobby);
+        }
+
+        function f2(){
+            console.log('f2:',name);
+            // console.log('f2:',age);//无法访问局部变量age
+            console.log('f2:',sex);
+            // console.log('f1:',hobby);//无法访问局部变量
+        }
+
+        // f1('健身');
+        // f2();
+        // console.log(name);
+        // // console.log(age);//无法访问ge
+        // console.log(sex);
+
+        /**
+         * 块级作用域
+         * 在javascript新版本规范ES6中。提供了let关键字用来定义变量，作用与var类似
+         */
+        if(true){
+            var a=6;//全局变量
+            let b=4;//块级变量，属于块级作用域，只能在当前代码块{}中使用
+            // console.log('a:',a);
+            // console.log('b:',b);
+        }
+
+        //代码块
+        {
+        var c=12;
+        let d=77;
+        }
+
+        for(let i=1;i<=10;i++){
+            
+        }
+        // console.log('i:',i);//无法访问块级作用域变量i
+
+        // console.log('a:',a);
+        // // console.log('b:',b);//无法访问块级作用域变量b
+        // console.log('c:',c);
+        // // console.log('d:',d);//无法访问块级作用域变量d
+
+        /**
+         * 如果局部变量和全局变量同名，默认访问的是局部变量
+         */
+        var x=5;
+        function f3(){
+            var x=8;
+
+            console.log('局部变量：',x);
+            console.log('全局变量：',window.x);
+            console.log('全局变量：',this.x);//此处的this表示当前函数的调用者
+        }
+        f3();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

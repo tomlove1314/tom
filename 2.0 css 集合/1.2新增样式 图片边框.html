@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .d1{
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        padding: 60px 60px;
+        /* 图片路径 */
+        /* border-image-source: url(../my-first-page/images/pic1_副本.jpg); */
+        /*裁剪位置不用加单位，对图片进行分割，分成四个方向*/
+        /* border-image-slice: 30 30 30 30; */
+        /* 边框宽度 */
+        /* border-image-width: 30px; */
+        /* 边框图像超出边框的值 */
+        /* border-image-outset: 50px; */
+        /* 重复的方式--round(常用 适当伸缩) stretch(默认拉伸) repeat(重复）*/
+        /* border-image-repeat:round; */
+
+        /* 简写 */
+        border-image:url(../my-first-page/images/pic1_副本.jpg) 30/30px/0px round;
+    }
+</style>
+<body>
+    <div class="d1">跟汤老师学开发</div>
+</body>
+</html>

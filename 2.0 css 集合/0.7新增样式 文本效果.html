@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+        font-size: 25px;
+        }
+        /* 文本阴影 */
+        span:first-child{
+        text-shadow: 10px 10px 5px red,
+                    -10px -10px 3px blue,
+                     5px -10px 3px rgb(57, 223, 52);
+        }
+        span:nth-of-type(2){
+            text-shadow:5px 0px 3px yellow,
+                        -5px 0px 3px yellow,
+                        0px -5px 3px yellow,
+                        0px 5px 3px yellow;
+        }
+        /* 文本裁剪 */
+        .d1{
+            width: 300px;
+            height: 100px;
+            border:1px solid red;
+            /* 先设置不自动换行nowrap，在设置超出部分隐藏 */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* text-overflow: "未完待续（火狐支持）"; */
+        }
+        /* 单词换行 */
+        .d2{
+            width: 400px;
+            height: 200px;
+            border: 1px solid palegreen;
+            /* 另起新行---单词放不下---强制换句 */
+            word-wrap: break-word;
+        }
+        .d3{
+            width: 400px;
+            height: 200px;
+            border: 1px solid rgb(22, 206, 234);
+            /* 在原来那行---单词放不下---强制换句 */
+            word-break: break-all;
+        }
+
+        }
+    </style>
+</head>
+<body>
+    <span>hello</span>
+    <span>world</span>
+    <hr>
+
+    <div class="d1">跟汤哥学开发，走上人生巅峰</div>
+    <hr>
+    <div class="d2">hello welcome to https://lbs.kuaishou.com/league/admin/goods/vulpix/manage</div><br>
+    <div class="d3">hello welcome to https://lbs.kuaishou.com/league/admin/goods/vulpix/manage</div>
+</body>
+</html>

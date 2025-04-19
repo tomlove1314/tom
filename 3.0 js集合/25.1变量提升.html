@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+         * 解析器执行javascript代码的过程
+         */
+
+        /**
+         * 思考一：underfined
+         */
+        // var num=10;
+        // fn();
+        // function fn(){
+        //     console.log(num);
+        //     var num=20;
+        // }
+
+        //第一步：预解析（全局作用域）
+        // var num;
+        // function fn(){
+        //     //第三步：预解析（局部作用域）
+        //     var num;
+
+        //     //第四步：从上往下，一行一行执行代码
+        //     console.log(num);//underfined
+        //     num=20;
+        // }
+
+        // //第二步：从上往下，一行一行执行代码
+        // num=10;
+        // fn();
+
+        /**
+         * 思考二：underfined 9
+         */
+        // var a=18;
+        // f1();
+        // function f1(){
+        //     var b=9;
+        //     console.log(a);
+        //     console.log(b);
+        //     var a='123';
+        // }
+
+        //解析
+        //第一步：
+        // var a;
+        // //第三步：
+        // function f1(){
+        //     //第四步：
+        //     var b;
+        //     var a;
+        //     //第五步：
+        //     b=9;
+        //     console.log(a);//underfined
+        //     console.log(b);//9
+        //     a='123';
+        // }
+        // //第二步：
+        // a=18;
+        // f1();
+
+        /**
+         * 思考三：
+         */
+        // f1();
+        // console.log(c);
+        // console.log(b);
+        // console.log(a);
+        // function f1(){
+        //     var a=b=c=9;
+        //     console.log(a);
+        //     console.log(b);
+        //     console.log(c);
+        // }
+
+        //解析
+        //第一步：
+        // function f1(){
+        //     //第三步：
+        //     var a;//局部变量
+            
+        //     var a=b=c=9;//等价于var a=9,b=9,c=9，b和c是全局变量
+        //     // var a=9,b=9,c=9;//等价于var a=9,var b=9,var c=9
+        //     console.log(a);
+        //     console.log(b);
+        //     console.log(c);
+        // }
+        // //第二步：
+        // f1();
+        // console.log(c);
+        // console.log(b);
+        // console.log(a);//a is not defined
+
+        /**
+         * 区分：没有声明变量和变量未定义
+         * 1.如果没有声明变量，报错： hobby is not defined
+         * 2.声明了变量，但是未赋值，结果：underfined
+         */
+        // console.log(hobby);//报错： hobby is not defined
+        var age;
+        console.log(age);//undefined
+        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /**
+         * eval()计算字符串表达式的值，并执行其中的JavaScript代码
+         */
+        // var str ='5+2';
+        // console.log(eval(str));
+
+        // var a=4,b=6;
+        // var str='a+b';
+        // var str='if(a>b){a*a}else(b*b)';
+        // var str='var c=8;alert(c);'
+        // console.log(eval(str));
+
+        /**
+         * encodeURI()和decodeURI()
+         */
+        var str='汤小洋';
+        //使用IS08859-1编码
+        // var encodestr=encodeURI(str);
+        // console.log(encodestr);
+        //使用IS08859-1解码
+        // var decodestr=decodeURI(encodestr);
+        // console.log(decodestr);
+
+        /**
+         * escape()和unescape()
+         */
+        // 使用Unicode编码
+        var escapestr=escape(str);
+        console.log(escapestr);
+        // 使用Unicode解码
+        var unescapestr=unescape(escapestr);
+        console.log(unescapestr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

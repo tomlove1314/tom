@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{  /* 根元素 */
+            /* 定义变量，全局变量 */
+            --mycolor:green;
+            --size:30px;
+            --bordercolor:pink;
+        }
+        div{
+            /* 调用变量 */
+            background-color: var(--mycolor);
+            font-size:var(--size);
+            /* 局部变量 */
+            --bordercolor:#222;
+            border: 5px solid var(--bordercolor);
+        }
+        div h3{
+            border: 5px solid var(--bordercolor);
+        }
+        p{
+            background-color: var(--mycolor); 
+            width: var(--size);
+            /* var（）函数可以指定第二个参数，表示默认值，当变量不存在会使用默认值 */
+            border: 5px dashed var(--bordercolor,blue);
+        }
+        span{
+            color: var(--mycolor);
+        }
+    </style>
+</head>
+<body>
+    <div>div
+        <h3>div中的h3</h3>
+    </div>
+    <p>p</p>
+    <span>span</span>
+</body>
+</html>
