@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>w3cschool</title>
+    </head>
+    <body>
+        <canvas id="myCanvas1" width="200" height="100">
+        </canvas>
+        <canvas id="myCanvas2" width="200" height="100">
+        </canvas>
+        <script type="text/javascript" charset="utf-8">
+            var c1=document.getElementById("myCanvas1");
+            var ctx1=c1.getContext("2d");
+            
+            var c2=document.getElementById("myCanvas2");
+            var ctx2=c2.getContext("2d");
+             
+            // 创建渐变
+            var grd1=ctx1.createLinearGradient(0,0,200,0);
+            grd1.addColorStop(0,"red");
+            grd1.addColorStop(1,"white");
+            
+            // 创建渐变
+            var grd2=ctx2.createRadialGradient(75,50,5,90,60,100);
+            grd2.addColorStop(0,"red");
+            grd2.addColorStop(1,"white");
+             
+            
+            // 填充渐变
+            ctx1.fillStyle=grd1;
+            ctx1.fillRect(10,10,150,80);
+            
+            // 填充渐变
+            ctx2.fillStyle=grd2;
+            ctx2.fillRect(10,10,150,80);
+        </script>
+    </body>
+</html>

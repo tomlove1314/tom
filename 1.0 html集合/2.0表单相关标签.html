@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="myform">
+        <!--数字-->
+        <label for="num">数字：</label>
+        <input type="number" name="num" id="num" min="0" max="200" step="2"><br><br>
+        <!--数字滑块-->
+        <label for="num">数字滑块</label>
+        <input type="range" name="num" id="num"><br><br>
+        <!--出生日期-->
+        <label for="birthday">出生日期：</label>
+        <input type="date" name="birthday" id="birthday"><br><br>
+        <!--颜色拾取-->
+        <label for="color">颜色：</label>
+        <input type="color" name="color" id="color"><br><br>
+        <!--pattern正则表达式，数据校验-->
+        <label for="age">年龄：</label>
+        <input type="text" name="age" id="age" pattern="\d{1,2}"><br><br>
+        <label for="city">城市：</label>
+        <input type="text" name="city" id="city" list="citylist">
+        <datalist id="citylist">
+            <option value="shanghai">上海</option>
+            <option value="yangpu">杨浦</option>
+            <option value="changzhou">常州</option>
+            <option value="jiangsu">江苏</option>
+        </datalist>
+
+
+    </form>
+    <!--form标签 表单外部关联表单-->
+    <input type="submit" form="myform">
+</body>
+
+</html>

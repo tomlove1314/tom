@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--audio音频-->
+    <!--
+        常用属性：
+        controls控制面板 autoplay自动播放 loop循环  muted静音 
+        preload提前加载(auto自动/none不加载/metadata基础数据加载)
+    -->
+    <audio src="../../音乐/乌梅子酱小雨.mp3"controls autoplay loop  preload="none"></audio><br><br>
+    
+    
+    <!--
+        通常结合source标签使用
+        指定多个，按顺序播放，如果格式都不支持最后给文字提示
+    -->
+        <audio controls>
+        <source src="../发票.xlsx">
+        <source src="../../音乐/园游会欢喜白象.mp3" >
+        你的浏览器不支持audio格式
+    </audio>
+
+    <br><br>
+
+
+    <!--video视频-->
+    <!--
+        常用属性：
+        controls控制面板 autoplay自动播放 loop循环  muted静音 
+        preload提前加载(auto自动/none不加载/metadata基础数据加载)
+        heigth/width设置一个自动调节
+        poster在没播放前显示的图片
+    -->
+    <video src="../../肯德基/1.mp4" controls height="300"
+    poster="../../女娲商品图/一木和 茶倍爽 茶叶含片/手淘APP_主图_2.jpg"></video>
+</body>
+</html>
